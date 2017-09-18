@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/placeholder.png "Model Visualization"
 [image2]: ./examples/center_2016_12_01_13_30_48_287.jpg "Driving in center"
-[image3]: ./examples/right_2017_07_23_23_37_29_356.png "Recovery Image"
+[image3]: ./examples/right_2017_07_23_23_37_29_356.jpg "Recovery Image"
 [image4]: ./examples/center_2016_12_01_13_39_21_759.jpg "Flipped Image #1"
 [image5]: ./examples/center_2016_12_01_13_40_07_838.jpg "Flipped Image #2"
 
