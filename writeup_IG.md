@@ -103,24 +103,17 @@ The final model architecture consisted of a convolution neural network with the 
 layer sizes:
 
 ____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
-====================================================================================================
-lambda_1 (Lambda)                (None, 32, 64, 1)     0           lambda_input_1[0][0]             
+|Layer (type)|                     Output Shape|          Param #|     Connected to|                     
+|---|---|---|---|
+|lambda_1 (Lambda)|                (None, 32, 64, 1)|     0|           lambda_input_1[0][0]|             
+|convolution2d_1 (Convolution2D)|  (None, 27, 59, 3)|     111|         lambda_1[0][0]|                   
+|maxpooling2d_1 (MaxPooling2D)|    (None, 9, 19, 3)|      0|          convolution2d_1[0][0]|            
+|convolution2d_2 (Convolution2D)|  (None, 7, 17, 3)|      84|			maxpooling2d_1[0][0]|             
+|maxpooling2d_2 (MaxPooling2D)|    (None, 2, 5, 3)|       0|           convolution2d_2[0][0]|            
+|dropout_1 (Dropout)|              (None, 2, 5, 3)|       0|           maxpooling2d_2[0][0]|             
+|flatten_1 (Flatten)|              (None, 30)|            0|           dropout_1[0][0]|                  
+|dense_1 (Dense)|                  (None, 1)|             31|          flatten_1[0][0]|                  
 ____________________________________________________________________________________________________
-convolution2d_1 (Convolution2D)  (None, 27, 59, 3)     111         lambda_1[0][0]                   
-____________________________________________________________________________________________________
-maxpooling2d_1 (MaxPooling2D)    (None, 9, 19, 3)      0           convolution2d_1[0][0]            
-____________________________________________________________________________________________________
-convolution2d_2 (Convolution2D)  (None, 7, 17, 3)      84          maxpooling2d_1[0][0]             
-____________________________________________________________________________________________________
-maxpooling2d_2 (MaxPooling2D)    (None, 2, 5, 3)       0           convolution2d_2[0][0]            
-____________________________________________________________________________________________________
-dropout_1 (Dropout)              (None, 2, 5, 3)       0           maxpooling2d_2[0][0]             
-____________________________________________________________________________________________________
-flatten_1 (Flatten)              (None, 30)            0           dropout_1[0][0]                  
-____________________________________________________________________________________________________
-dense_1 (Dense)                  (None, 1)             31          flatten_1[0][0]                  
-====================================================================================================
 Total params: 226
 Trainable params: 226
 Non-trainable params: 0
