@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/placeholder.png "Model Visualization"
 [image2]: ./examples/center_2016_12_01_13_30_48_287.jpg "Driving in center"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
+[image3]: ./examples/right_2017_07_23_23_37_29_356.png "Recovery Image"
 [image4]: ./examples/center_2016_12_01_13_39_21_759.jpg "Flipped Image #1"
 [image5]: ./examples/center_2016_12_01_13_40_07_838.jpg "Flipped Image #2"
 
@@ -151,10 +151,9 @@ improve the steering.
 ![alt text][image5]
 
 After the collection process, I had around 55000 number of data points, depending on how many data points 
-were neglected because of the steering threshold. I then preprocessed this data by changing the color 
+were neglected because of the steering threshold. The neglection is done randomly, so that I cannot tell the exact number of data points. I then preprocessed this data by changing the color 
 space to HSV and choosing the S channel. It proved in previous lessons to work very well and yield to 
-distinguished features in this project. Furthermore, I resized the image to 32x64 (height and width in pixels) 
-in order to reduce the computational load on my machine which lead to significantly quicker calculations. 
+distinguished features in this project. Furthermore, I resized the image to 32x64 (height and width in pixels) in order to reduce the computational load on my machine which lead to significantly quicker calculations. 
 Within the model, I used a lambda layer to normalize the S-channel value.
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
